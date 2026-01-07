@@ -4,7 +4,7 @@
       "appId": "d5689850",
       "root": "./client",
       "dependencyInstallCommand": "cd .. && npm install",
-      "webBuildCommand": "cd .. && npm run frontend",
+      "webBuildCommand": "export NODE_OPTIONS=\"--max-old-space-size=4096\" && cd .. && npm run frontend",
       "androidPath": "android"
     }
   ]
