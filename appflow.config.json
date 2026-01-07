@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "appId": "d5689850",
+      "root": "./client",
+      "dependencyInstallCommand": "cd .. && npm install",
+      "webBuildCommand": "cd .. && npm run frontend",
+      "androidPath": "android"
+    }
+  ]
+}
