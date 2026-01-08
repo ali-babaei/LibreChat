@@ -18,6 +18,9 @@ export default defineConfig(({ command }) => ({
     host: process.env.HOST || 'localhost',
     port: process.env.PORT && Number(process.env.PORT) || 3090,
     strictPort: false,
+    watch: {
+      ignored: ['**/android/**', '**/ios/**'],
+    },
     proxy: {
       '/api': {
         target: backendURL,
@@ -28,6 +31,9 @@ export default defineConfig(({ command }) => ({
         changeOrigin: true,
       },
     },
+  },
+  optimizeDeps: {
+    entries: ['index.html'],
   },
   // Set the directory where environment variables are loaded from and restrict prefixes
   envDir: '../',
